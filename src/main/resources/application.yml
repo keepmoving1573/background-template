@@ -1,0 +1,14 @@
+server:
+    port: 8080
+
+spring:
+    freemarker:
+        prefix:
+        suffix: .html
+
+datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huan_blog?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    maximumPoolSize: 10
