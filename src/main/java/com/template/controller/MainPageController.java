@@ -24,7 +24,7 @@
 
 package com.template.controller;
 
-import com.template.model.UserInfo;
+import com.template.model.User;
 import com.template.service.MainPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,17 +44,15 @@ public class MainPageController {
     @Autowired
     private MainPageService mainPageService;
 
-    @RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
-        UserInfo user = mainPageService.selectUserDetail();
-        modelAndView.addObject("user", user);
         return modelAndView;
     }
 
     @ResponseBody
     @RequestMapping(value = "test", method = RequestMethod.GET)
-    public List<UserInfo> selectAll() {
+    public List<User> selectAll() {
         return mainPageService.selectAll();
     }
 }

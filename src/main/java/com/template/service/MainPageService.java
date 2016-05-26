@@ -25,7 +25,7 @@
 package com.template.service;
 
 
-import com.template.model.UserInfo;
+import com.template.model.User;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ import java.util.List;
  */
 public interface MainPageService {
 
-    List<UserInfo> selectAll();
+    List<User> selectAll();
 
-    UserInfo selectUserDetail();
+    User selectUserDetail();
 }

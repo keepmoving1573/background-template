@@ -21,7 +21,7 @@
         <!--  XML生成路径  -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>
-        <mysql.version>6.0.2</mysql.version>
+        <mysql.version>5.1.39</mysql.version>
         <junit.version>4.12</junit.version>
     </properties>
 

@@ -24,8 +24,8 @@
 
 package com.template.service.impl;
 
-import com.template.mapper.UserInfoMapper;
-import com.template.model.UserInfo;
+import com.template.mapper.UserMapper;
+import com.template.model.User;
 import com.template.service.MainPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,14 +39,14 @@ import java.util.List;
 public class MainPageServiceImpl implements MainPageService {
 
     @Autowired
-    private UserInfoMapper userInfoMapper;
+    private UserMapper userMapper;
 
-    public List<UserInfo> selectAll() {
-        return userInfoMapper.selectAll();
+    public List<User> selectAll() {
+        return userMapper.selectAll();
     }
 
-    public UserInfo selectUserDetail() {
-        return userInfoMapper.selectByPrimaryKey("1");
+    public User selectUserDetail() {
+        return userMapper.selectByPrimaryKey("1");
     }
 
 }
