@@ -24,16 +24,12 @@
 
 package com.template.controller;
 
-import com.template.model.User;
 import com.template.service.MainPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
 
 /**
  * @author zhanhuanhuan
@@ -50,9 +46,5 @@ public class MainPageController {
         return modelAndView;
     }
 
-    @ResponseBody
-    @RequestMapping(value = "test", method = RequestMethod.GET)
-    public List<User> selectAll() {
-        return mainPageService.selectAll();
-    }
+
 }
